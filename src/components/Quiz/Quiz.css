@@ -1,0 +1,21 @@
+.quiz-over-text {
+    background-color: #c0e2ed;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.flashcard-container {
+    background-color: #c0e2ed;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.flashcard-button {
+    margin: 10px;
+    border-radius: 15px;
+    padding: 8px;
+    border-color: blue;
+    background: transparent;
+    width: 150px;
+}

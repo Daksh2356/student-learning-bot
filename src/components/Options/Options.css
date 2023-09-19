@@ -1,0 +1,12 @@
+.options-container {
+    display: flex;
+}
+
+.option-button {
+    margin: 5px;
+    border-radius: 25px;
+    padding: 8px;
+    border-color: blue;
+    background: transparent;
+    text-align: center;
+}
