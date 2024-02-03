@@ -9,13 +9,14 @@ class MessageParser {
 
     const lowercase = message.toLowerCase();
 
+    if (lowercase.includes("name") || lowercase.includes("am")) {
+      this.actionProvider.handleName(message);
+    }
+
     if (lowercase.includes("hello") || lowercase.includes("hi")) {
       this.actionProvider.greet();
     }
 
-    if (lowercase.includes("name") || lowercase.includes("am")) {
-      this.actionProvider.handleName(message);
-    }
 
     if (lowercase.includes("you")) {
       this.actionProvider.handleQuestions();
@@ -29,6 +30,10 @@ class MessageParser {
       this.actionProvider.work();
     }
 
+    // if(lowercase.includes("what")){
+    //   this.actionProvider.provideResponse();
+    // };
+
     if (lowercase.includes("javascript") || lowercase.includes("js")) {
       this.actionProvider.handleJavascriptQuiz();
     }
@@ -39,6 +44,14 @@ class MessageParser {
 
     if (lowercase.includes("python") || lowercase.includes("py")) {
       this.actionProvider.handlePythonQuiz();
+    }
+
+    if(lowercase.includes("option")) {
+      this.actionProvider.handleOptions();
+    }
+
+    if(lowercase.includes("start") ) {
+      this.actionProvider.handleStart();
     }
 
     if (lowercase.includes("bye")) {

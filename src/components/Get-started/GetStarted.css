@@ -1,0 +1,21 @@
+.get-started-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-started-button {
+    margin: 5px;
+    border-radius: 25px;
+    padding: 8px;
+    width: 100px;
+    border-color: blue;
+    background: transparent;
+    text-align: center;
+}
+
+.get-started-button:hover{
+    background: rgb(159, 159, 238);
+    color: white;
+    border-color: black;
+}

@@ -1,15 +1,23 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import Options from "../components/Options/Options";
 import Quiz from "../components/Quiz/Quiz";
+import GetStarted from "../components/Get-started/GetStarted";
 
 const config = {
-  botName: "LearningBot",
-  initialMessages: [createChatBotMessage('What do you want to learn',
+  botName: "Student Help Bot",
+  initialMessages: [createChatBotMessage('Welcome to the student info system',
     {
-      widget: "options"
+      widget: "get-started"
     }),
   ],
+  customMessages: [
+    "hello, hi wasup !"
+  ],
   widgets: [
+    {
+      widgetName: "get-started",
+      widgetFunc: (props) => <GetStarted {...props}/>
+    },
     {
       widgetName: "options",
       widgetFunc: (props) => <Options {...props} />

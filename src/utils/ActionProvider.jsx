@@ -59,10 +59,19 @@ class ActionProvider {
 
     this.addMessageToState(message);
   };
+  handlePythonScript = () => {
+    const message = this.createChatBotMessage(
+      "Here's your Python quiz, All the best for it!",
+      {
+        widget: "pythonQuiz",
+      }
+    );
 
+    this.addMessageToState(message);
+  };
   handleMernQuiz = () => {
     const message = this.createChatBotMessage(
-      "Fantastic!! Get on with the MERN Stack quiz, Wishes ✨",
+      "Here's your MERN quiz, All the best for it!",
       {
         widget: "mernQuiz",
       }
@@ -71,16 +80,36 @@ class ActionProvider {
     this.addMessageToState(message);
   };
 
-  handlePythonQuiz = () => {
+  provideResponse = () => {
+    const message = this.createClientMessage(
+      "Got it"
+    )
+    this.addMessageToState(message);
+  }
+
+  handleOptions = () => {
     const message = this.createChatBotMessage(
-      "Good choice made, let's go you started with a Python Quiz 🐍",
+      "Here's are your options...",
       {
-        widget: "pythonQuiz",
+        widget : "options",
       }
     );
 
     this.addMessageToState(message);
-  };
+  }
+
+
+  handleStart = () => {
+    const message = this.createChatBotMessage(
+      "Let's get you started again",
+      {
+        widget : "get-started",
+      }
+    );
+
+    this.addMessageToState(message);
+  }
+
 
   handleBye = () => {
     const botMessage = this.createChatBotMessage(
